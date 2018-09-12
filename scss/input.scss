@@ -1,13 +1,312 @@
-.container {
-  display: flex;
+// variables
+$fancyFont: 'PT Sans Narrow', sans-serif;
+$bodyFont: 'Muli', sans-serif;
+$darkGrey: #737070;
+$lightGrey: #D6D6D6;
+$lightBlue: #C2E2EA;
+$medBlue: #A7DBE9;
+$darkBlue: #2E8CA4;
+
+body {
+  color: $darkGrey;
+  font-family: $bodyFont;
+  font-size: 15px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.wholeContainer {
+  display: block;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  color: $darkGrey;
+  font-family: $fancyFont;
+}
+
+li {
+  font-size: 10px;
 }
 
 .trackNav {
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: space-between;
+  .btn {
+    font-size: 14px;
+    background-color: none;
+    color: $darkGrey;
+    font-family: $fancyFont;
+  }
+  .btn:hover {
+    border: 1px solid $medBlue;
+  }
+  .btn:active {
+    color: $darkBlue;
+  }
+}
+.nav-button-container {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  margin: 0;
+  left: 5px;
+  top: 30px;
+  width: auto;
+  border: none;
+  padding: 0;
+  .dropdown-item {
+    border: 1px solid $darkBlue;
+    padding: 15px;
+  }
 }
 
-.btn {
-  font-size: 12px;
-  background-color: none;
+#intro-container:hover #intro-dropdown {
+  display: block;
+}
+
+#front-end-container:hover #front-end-dropdown {
+  display: block;
+}
+
+#cSharp-container:hover #cSharp-dropdown {
+  display: block;
+}
+
+#rails-container:hover #rails-dropdown {
+  display: block;
+}
+
+#react-container:hover #react-dropdown {
+  display: block;
+}
+
+#intern-container:hover #intern-dropdown {
+  display: block;
+}
+
+.mainContentContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftNav {
+  position: relative;
+  background-color: $lightBlue;
+  width: 300px;
+  border-radius: 10px;
+  text-align: left;
+  min-height: 100vmin;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  .title {
+    margin-top: 20px;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    text-align: left;
+    padding-right: 10px;
+  }
+}
+
+.segments {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  a {
+    color: $darkGrey;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  display: none;
+}
+
+.day-of-the-week-icon {
+  width: 25px;
+}
+
+.active {
+  h6 {
+    color: $darkBlue;
+  }
+  .submenu {
+    display: block;
+  }
+}
+
+.submenu-row {
+  display: flex;
+  margin: 5px 0;
+}
+
+.submenu-icon {
+  margin: 0 15px;
+}
+
+.submenu-title {
+  text-align: left;
+  a:hover {
+    color: $darkGrey;
+    text-decoration: none;
+  }
+}
+
+.leftNav-footer {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+}
+
+
+.pageContent {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.header-title-row {
+  justify-content: space-between;
+}
+
+.previous {
+  display: flex;
+}
+
+.next {
+  display: flex;
+
+}
+
+.arrow {
+  display: inline-block;
+  &:first-child {
+    margin-right: 15px;
+  }
+  &:last-child {
+    margin-left: 15px;
+  }
+}
+
+.lesson-title {
+  font-family: $fancyFont;
+  font-size: 24px;
+  color: $darkGrey;
+}
+
+.header-button-row {
+  justify-content: center;
+  .btn {
+    background-color: $lightBlue;
+    color: $darkGrey;
+  }
+}
+
+.btn-container {
+  margin: 0 10px;
+}
+
+.overlay {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  .close-overlay {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: white;
+    font-size: 40pt;
+    border: 2px solid white;
+    padding: 10px;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  .video {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    iframe {
+      width: 100%;
+    }
+  }
+  .cheat-sheet {
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    .cheat-sheet-background {
+      background-color: white;
+    }
+    .cheat-sheet-content {
+      margin: 10px;
+      border: 2px solid $darkBlue;
+      padding: 10px;
+    }
+  }
+  .text {
+    width: 100%;
+    margin-top: 15px;
+    .ital {
+      font-style: italic;
+    }
+    a {
+      color: $darkBlue;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }

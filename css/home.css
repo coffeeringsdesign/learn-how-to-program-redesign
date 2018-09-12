@@ -1,0 +1,12 @@
+// variables
+$fancyFont: 'PT Sans Narrow', sans-serif;
+$darkGrey: #737070;
+$lightBlue: #C2E2EA;
+$medBlue: #A7DBE9;
+$darkBlue: #2E8CA4;
+
+
+
+#introBtn {
+  color: $darkBlue;
+}
