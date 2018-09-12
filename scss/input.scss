@@ -1,4 +1,13 @@
 .container {
   display: flex;
-  background-color: green;
+}
+
+.trackNav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 12px;
+  background-color: none;
 }
