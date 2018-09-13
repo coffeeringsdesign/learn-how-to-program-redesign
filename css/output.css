@@ -6,6 +6,9 @@ body {
 p {
   font-size: 16px; }
 
+.hidden {
+  display: none; }
+
 .wholeContainer {
   display: block;
   width: 1024px;
@@ -15,9 +18,6 @@ p {
 .title {
   color: #737070;
   font-family: "PT Sans Narrow", sans-serif; }
-
-li {
-  font-size: 10px; }
 
 .trackNav {
   display: flex;
@@ -49,6 +49,10 @@ li {
   .dropdown-menu .dropdown-item {
     border: 1px solid #2E8CA4;
     padding: 15px; }
+  .dropdown-menu a {
+    color: #2E8CA4; }
+    .dropdown-menu a:hover {
+      text-decoration: none; }
 
 #intro-container:hover #intro-dropdown {
   display: block; }
@@ -70,15 +74,16 @@ li {
 
 .mainContentContainer {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 100%; }
 
 .leftNav {
   position: relative;
   background-color: #C2E2EA;
-  width: 300px;
+  width: 30%;
   border-radius: 10px;
   text-align: left;
-  min-height: 100vmin;
+  height: 1000px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 20px; }
@@ -142,13 +147,15 @@ li {
     margin-top: 10px; }
 
 .pageContent {
-  width: 100%;
+  width: 70%;
   margin-left: 30px; }
 
 .header {
   display: flex;
   flex-direction: column;
   width: 100%; }
+  .header a {
+    color: #2E8CA4; }
 
 .header-row {
   display: flex;
@@ -234,9 +241,59 @@ li {
     margin-top: 15px; }
     .content .text .ital {
       font-style: italic; }
+    .content .text .bold {
+      font-weight: bold; }
+    .content .text h1 {
+      font-size: 24px;
+      color: #2E8CA4; }
+    .content .text h2 {
+      font-size: 20px;
+      color: #2E8CA4; }
     .content .text a {
       color: #2E8CA4; }
       .content .text a:hover {
         text-decoration: none; }
+    .content .text pre {
+      display: inline; }
+    .content .text .card-header {
+      color: #2E8CA4;
+      font-weight: bold; }
+
+.make-this-red {
+  color: red; }
+
+.make-this-green {
+  color: green; }
+
+.make-this-blue {
+  color: blue; }
+
+.mobile-content-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 10px;
+  width: 355px; }
+
+.dropdown-mobile {
+  width: 230px; }
+  .dropdown-mobile .dropdown-item {
+    overflow-wrap: normal;
+    white-space: normal; }
+
+.btn-mobile {
+  background-color: #C2E2EA; }
+
+.flex-row {
+  text-align: center;
+  margin: 5px; }
+  .flex-row img {
+    width: 100%;
+    margin: 10px 0; }
+
+.menu {
+  background-color: #C2E2EA; }
 
 /*# sourceMappingURL=output.css.map */

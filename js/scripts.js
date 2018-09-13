@@ -17,9 +17,24 @@ $(document).ready(function() {
     $("#submenu-1").slideDown();
   });
 
+  $("#getting-started-javascript-toplink").click(function() {
+    closeAllSubMenus();
+    $("#submenu-1").slideDown();
+  });
+
   $("#git-html-css-toplink").click(function() {
     closeAllSubMenus();
     $("#submenu-2").slideDown();
+  });
+
+  $("#javascript-with-webpack-toplink").click(function() {
+    closeAllSubMenus();
+    $("#submenu-2").slideDown();
+  });
+
+  $("#test-driven-development-toplink").click(function() {
+    closeAllSubMenus();
+    $("#submenu-3").slideDown();
   });
   // Left nav dropdown functions end //
 
