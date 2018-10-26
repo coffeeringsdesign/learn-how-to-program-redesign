@@ -1,3 +1,7 @@
+![Kendra Kelly Logo](/kkgithub.png)
+
+# Learn How to Program Redesign
+
 #### By _**Kendra Kelly & Joe Friesen**_
 
 ## Description
